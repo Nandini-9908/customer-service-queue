@@ -19,5 +19,15 @@ struct CallLogNode {
     }
 };
 //call log queue class
+class CallLogQueue {
+private:
+    CallLogNode* head;
+    CallLogNode* tail;
+
+public:
+    CallLogQueue() {
+        head = nullptr;
+        tail = nullptr;
+    }
 
 
