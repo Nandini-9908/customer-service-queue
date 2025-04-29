@@ -18,5 +18,6 @@ struct CallLogNode {
         prev = nullptr;
     }
 };
+//call log queue class
 
 
