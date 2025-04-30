@@ -49,7 +49,14 @@ void addCall(string customerName)
         newCall->prev=tail;
         tail=newCall;
     }
-   cout<< "Call From "<<customerName <<" Added At "<<ctime(&newCall->timestamp);
+   cout<< "Call From "<<customerName <<" Added on "<<ctime(&newCall->timestamp);
 }
+void removeOldestCall()
+{
+        if (!head)
+        {
+            cout << "No calls to remove.\n";
+            return;
+        }
 
 
