@@ -58,5 +58,16 @@ void removeOldestCall()
             cout << "No calls to remove.\n";
             return;
         }
+      CallLogNode* temp = head;
+        head = head->next;
+        if (head)
+            head->prev = NULL;
+        else
+            tail = NULL;
+
+        cout << "Removing call from " << temp->customerName << " on " << ctime(&temp->timestamp);
+        delete temp;
+}
+
 
 
