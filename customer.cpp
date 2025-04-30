@@ -68,6 +68,23 @@ void removeOldestCall()
         cout << "Removing call from " << temp->customerName << " on " << ctime(&temp->timestamp);
         delete temp;
 }
+void displayLogs() 
+{
+        if (!head)
+        {
+            cout << "No call logs available.\n";
+            return;
+        }
+
+        CallLogNode* current = head;
+        cout << "Call Logs:\n";
+        while (current)
+            {
+            cout << "- " << current->customerName << " on " << ctime(&current->timestamp);
+            current = current->next;
+             }
+}
+
 
 
 
