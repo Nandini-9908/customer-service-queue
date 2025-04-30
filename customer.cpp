@@ -39,7 +39,7 @@ void addCall(string customerName)
 {
     callLogNode* newCall=new callLogNOde(customerName);
 
-    if(!head)
+    if(!head) // Empty List
     {
         head = tail=newCall;
     }
