@@ -37,7 +37,7 @@ public:
 // Add a new call to the end of the Queue
 void addCall(string customerName)
 {
-    callLogNode* newCall=new callLogNOde(customerName);
+    CallLogNode* newCall=new callLogNOde(customerName);
 
     if(!head) // Empty List
     {
@@ -84,6 +84,17 @@ void displayLogs()
             current = current->next;
              }
 }
+
+~CallLogQueue() 
+ {
+    while (head)
+     {
+        CallLogNode* temp = head;
+        head=head->next;
+        delete temp;
+     }
+  }
+};
 
 
 
